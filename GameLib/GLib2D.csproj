@@ -78,8 +78,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Graphics\GameObject.cs" />
+    <Compile Include="Graphics\IDrawable.cs" />
     <Compile Include="Graphics\IGlibView.cs" />
     <Compile Include="Graphics\GLibView.cs" />
+    <Compile Include="Graphics\ITransformable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

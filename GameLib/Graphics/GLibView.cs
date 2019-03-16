@@ -51,6 +51,7 @@ namespace GLib.Graphics
                 RenderWindow.DispatchEvents();
 
                 throw new NotImplementedException();
+                RenderWindow.Draw()
 
                 RenderWindow.Clear(ClearColor);
                 RenderWindow.Display();
