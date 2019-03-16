@@ -82,7 +82,11 @@
     <Compile Include="Graphics\IDrawable.cs" />
     <Compile Include="Graphics\IGlibView.cs" />
     <Compile Include="Graphics\GLibView.cs" />
+    <Compile Include="Graphics\2DShapes\IRectShape.cs" />
+    <Compile Include="Graphics\2DShapes\IShape.cs" />
     <Compile Include="Graphics\ITransformable.cs" />
+    <Compile Include="Graphics\2DShapes\RectShape.cs" />
+    <Compile Include="Graphics\2DShapes\Shape.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

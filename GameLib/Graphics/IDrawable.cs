@@ -4,6 +4,6 @@ namespace GLib2D.Graphics
 {
     interface IDrawable : ITransformable
     {
-        Drawable ObjectDraw { get; set; }
+        Drawable ObjectDraw { get;}
     }
 }
