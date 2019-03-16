@@ -8,7 +8,7 @@ using SFML.System;
 
 namespace GLib2D.Graphics
 {
-    public abstract class GameObject : ITransformable, IDrawable
+    public abstract class GameObject : IDrawable
     {
         public Vector2f Position { get ; set ; }
         public Vector2f Rotation { get ; set ; }
