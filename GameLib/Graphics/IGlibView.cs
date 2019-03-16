@@ -1,7 +1,7 @@
 ﻿using SFML.Graphics;
 using SFML.System;
 
-namespace Chess.Graphics
+namespace GLib.Graphics
 {
     interface IGlibView
     {
