@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLib2D", "Chess\GLib2D.csproj", "{3547AE18-C01B-440A-AFFC-620CFE96C7C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLib2D", "GameLib\GLib2D.csproj", "{3547AE18-C01B-440A-AFFC-620CFE96C7C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
