@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using GLib2D.Graphics;
 using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
@@ -13,6 +15,7 @@ namespace GLib.Graphics
         public Color ClearColor { get; set; }
 
         private RenderWindow RenderWindow { get; set; }
+        public List<GameObject> GameObjects { get; set; }
 
         #region Constructors
 
@@ -49,13 +52,21 @@ namespace GLib.Graphics
             while (RenderWindow.IsOpen)
             {
                 RenderWindow.DispatchEvents();
-
-                throw new NotImplementedException();
+                DrawGameObjects();
 
                 RenderWindow.Clear(ClearColor);
                 RenderWindow.Display();
             }
         }
 
+        private void DrawGameObjects()
+        {
+            for (int i = 0; i < GameObjects.Count; i++)
+            {
+                GameObjects[i].Update();
+                foreach (var Go in GameObjects[i])
+                    RenderWindow.Draw(Go.ObjectDraw);
+            }
+        }
     }
 }

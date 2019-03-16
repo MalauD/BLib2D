@@ -9,8 +9,7 @@ namespace GLib2D.Graphics.Shapes
         public abstract Shape GShape { get; protected set; }
         public Drawable ObjectDraw { get => GShape;}
         public Vector2f Position { get; set; }
-        public Vector2f Rotation { get; set; }
+        public float Rotation { get; set; }
         public Vector2f Scale { get; set; }
-        
     }
 }

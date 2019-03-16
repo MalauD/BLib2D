@@ -1,5 +1,7 @@
-﻿using SFML.Graphics;
+﻿using GLib2D.Graphics;
+using SFML.Graphics;
 using SFML.System;
+using System.Collections.Generic;
 
 namespace GLib.Graphics
 {
@@ -9,6 +11,7 @@ namespace GLib.Graphics
         string WindowName { get; set; }
         Color ClearColor { get; set; }
 
+        List<GameObject> GameObjects { get; set; }
 
         Vector2i WindowSize { get; set; }
 

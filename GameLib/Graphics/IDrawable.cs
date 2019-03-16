@@ -2,7 +2,7 @@
 
 namespace GLib2D.Graphics
 {
-    interface IDrawable : ITransformable
+    public interface IDrawable : ITransformable
     {
         Drawable ObjectDraw { get;}
     }
