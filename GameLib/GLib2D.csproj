@@ -78,6 +78,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Graphics\DrawableCollection.cs" />
     <Compile Include="Graphics\GameObject.cs" />
     <Compile Include="Graphics\IDrawable.cs" />
     <Compile Include="Graphics\IGlibView.cs" />

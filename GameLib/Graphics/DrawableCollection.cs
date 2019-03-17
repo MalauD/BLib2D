@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections;
+﻿using SFML.System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GLib2D.Graphics
 {
     public class DrawableCollection : List<IDrawable>
     {
-        
+
     }
 }

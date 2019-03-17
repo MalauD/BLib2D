@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using GLib2D.Graphics;
+using GLib2D.Graphics.Shapes;
 using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
 
-namespace GLib.Graphics
+namespace GLib2D.Graphics
 {
     public class GLibView : IGlibView
     {
@@ -24,6 +25,7 @@ namespace GLib.Graphics
             WindowSize = windowSize;
             WindowName = "GLibView";
             IsVisible = true;
+            GameObjects = new List<GameObject>();
         }
 
         public GLibView(string windowName, Vector2i windowSize)
@@ -31,6 +33,7 @@ namespace GLib.Graphics
             WindowName = windowName;
             WindowSize = windowSize;
             IsVisible = true;
+            GameObjects = new List<GameObject>();
         }
 
         public GLibView(bool isVisible, string windowName, Vector2i windowSize)
@@ -38,9 +41,11 @@ namespace GLib.Graphics
             IsVisible = isVisible;
             WindowName = windowName;
             WindowSize = windowSize;
+            GameObjects = new List<GameObject>();
         }
 
         #endregion
+        
 
         public void Start(Color clearColor)
         {
@@ -52,9 +57,11 @@ namespace GLib.Graphics
             while (RenderWindow.IsOpen)
             {
                 RenderWindow.DispatchEvents();
-                DrawGameObjects();
+                
 
                 RenderWindow.Clear(ClearColor);
+
+                DrawGameObjects();
                 RenderWindow.Display();
             }
         }
@@ -65,8 +72,16 @@ namespace GLib.Graphics
             {
                 GameObjects[i].Update();
                 foreach (var Go in GameObjects[i])
-                    RenderWindow.Draw(Go.ObjectDraw);
+                {
+                    var g = Go;
+                    g.base.Position =   GameObjects[i].Position;
+                    RenderWindow.Draw(g.ObjectDraw);
+                    Console.WriteLine(g.Position.X);
+                }
+                   
             }
         }
+
+        public void AddGameObject(GameObject go) => GameObjects.Add(go);
     }
 }

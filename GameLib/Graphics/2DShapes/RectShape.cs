@@ -14,7 +14,10 @@ namespace GLib2D.Graphics.Shapes
         public override Shape GShape { get => RectShape; protected set => throw new NotImplementedException(); }
 
         public Vector2f Size { get => RectShape.Size; set => RectShape.Size = value; }
-        public new Vector2f Position { get => RectShape.Origin; set => RectShape.Origin = value; }
+        public new Vector2f Position { get => RectShape.Position; set {
+                base.Position = value;
+                RectShape.Position = value;
+            } }
 
         public RectangleShape2D(Vector2f origin,Vector2f size)
         {

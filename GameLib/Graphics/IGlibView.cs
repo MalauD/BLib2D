@@ -3,7 +3,7 @@ using SFML.Graphics;
 using SFML.System;
 using System.Collections.Generic;
 
-namespace GLib.Graphics
+namespace GLib2D.Graphics
 {
     interface IGlibView
     {
